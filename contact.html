@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Personal Web Log</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #333;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px double #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #0000EE;
+            font-size: 28px;
+            margin: 0;
+            text-decoration: underline;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .nav {
+            background-color: #ddd;
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #0000EE;
+            text-decoration: underline;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .nav a:visited {
+            color: #551A8B;
+        }
+        
+        .nav a:hover {
+            background-color: yellow;
+        }
+        
+        .nav .current {
+            background-color: #ffff99;
+            padding: 2px 5px;
+            border: 1px solid #333;
+        }
+        
+        .content {
+            margin: 20px 0;
+        }
+        
+        .content h2 {
+            color: #0000EE;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+        
+        .contact-method {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .contact-form {
+            background-color: #e6e6e6;
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .form-group {
+            margin: 15px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 5px;
+            border: 2px inset #ddd;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #ddd;
+            border: 2px outset #ddd;
+            padding: 8px 16px;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ccc;
+        }
+        
+        .submit-btn:active {
+            border: 2px inset #ddd;
+        }
+        
+        .warning-box {
+            background-color: #ffffcc;
+            border: 2px solid #ff6600;
+            padding: 10px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        
+        .footer {
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .email-art {
+            font-family: "Courier New", monospace;
+            background-color: #000;
+            color: #00ff00;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Personal Web Log</h1>
+            <div class="subtitle">Get In Touch</div>
+        </div>
+        
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="links.html">Cool Links</a>
+            <a href="guestbook.html">Guestbook</a>
+            <span class="current">Contact</span>
+        </div>
+        
+        <div class="content">
+            <p>Thanks for wanting to get in touch! I love hearing from fellow web enthusiasts, retro computing fans, and anyone who appreciates the simple beauty of hand-coded HTML.</p>
+            
+            <h2>📧 Email Me</h2>
+            <div class="contact-method">
+                <p><b>Primary Email:</b> webmaster@yourdomain.com</p>
+                <p><b>Response Time:</b> Usually within 24-48 hours</p>
+                <p><b>Best For:</b> General inquiries, collaboration ideas, feedback about the site</p>
+                
+                <div class="email-art">
+ _____ __  __          _____ _      
+| ____|  \/  |   /\   |_   _| |     
+|  _| | |\/| |  /  \    | | | |     
+| |___| |  | | / /\ \   | | | |___  
+|_____|_|  |_|/_/  \_\  |_| |_____|
+                                   
+webmaster@yourdomain.com
+                </div>
+            </div>
+            
+            <h2>💬 Other Ways to Reach Me</h2>
+            <div class="contact-method">
+                <p><b>IRC:</b> You can find me on #retroweb on Libera.Chat</p>
+                <p><b>Mastodon:</b> @yourhandle@mastodon.social (for the decentralized web!)</p>
+                <p><b>Traditional Mail:</b> Available upon request (yes, I still love snail mail!)</p>
+            </div>
+            
+            <h2>📝 Contact Form</h2>
+            <div class="warning-box">
+                <b>Note:</b> This is a static HTML form for demonstration. In a real deployment, you'd need a backend service to handle form submissions (like Netlify Forms, Formspree, or your own server script).
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Your Website (optional):</label>
+                        <input type="url" id="website" name="website" placeholder="https://yoursite.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="feedback">Website Feedback</option>
+                            <option value="collaboration">Collaboration Idea</option>
+                            <option value="link-exchange">Link Exchange</option>
+                            <option value="retro-computing">Retro Computing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" id="webring" name="webring" style="width: auto;">
+                        <label for="webring" style="display: inline; margin-left: 5px;">I'm interested in joining a web ring!</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            
+            <h2>🤝 What I'm Looking For</h2>
+            <div class="contact-method">
+                <p><b>Link Exchanges:</b> Got a cool personal site? Let's swap links!</p>
+                <p><b>Web Ring Participation:</b> Always interested in joining retro web communities</p>
+                <p><b>Collaboration:</b> Projects related to web preservation, retro computing, or digital minimalism</p>
+                <p><b>Just Saying Hi:</b> Fellow fans of the simple web are always welcome!</p>
+            </div>
+            
+            <h2>⚠️ Please Don't</h2>
+            <div class="contact-method">
+                <p>❌ Spam or marketing emails<br>
+                ❌ Requests to "optimize" my site for modern frameworks<br>
+                ❌ SEO services (this site is perfectly optimized for 1995!)<br>
+                ❌ Cryptocurrency or investment schemes</p>
+            </div>
+            
+            <div class="warning-box">
+                <b>Response Policy:</b> I try to respond to all legitimate emails within 48 hours. If you don't hear back, check your spam folder or try reaching out via a different method!
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><a href="index.html">← Back to Home</a></p>
+            <p>&copy; 2025 My Personal Web Log. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
