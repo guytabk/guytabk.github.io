@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יומן הרשת האישי שלי</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            direction: rtl;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #333;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px double #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #0000EE;
+            font-size: 28px;
+            margin: 0;
+            text-decoration: underline;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .language-switcher {
+            text-align: center;
+            margin: 10px 0;
+            padding: 5px;
+            background-color: #ffffcc;
+            border: 1px solid #999;
+        }
+        
+        .language-switcher a {
+            color: #0000EE;
+            text-decoration: underline;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        
+        .nav {
+            background-color: #ddd;
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #0000EE;
+            text-decoration: underline;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .nav a:visited {
+            color: #551A8B;
+        }
+        
+        .nav a:hover {
+            background-color: yellow;
+        }
+        
+        .post {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+        
+        .post-title {
+            color: #0000EE;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+        
+        .post-date {
+            color: #666;
+            font-size: 12px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .post-content {
+            text-align: justify;
+        }
+        
+        .post-language {
+            background-color: #e6f3ff;
+            border: 1px solid #0066cc;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #0066cc;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .english-post {
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .hebrew-post {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .sidebar {
+            background-color: #e6e6e6;
+            border: 1px solid #999;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .sidebar h3 {
+            color: #0000EE;
+            font-size: 16px;
+            text-decoration: underline;
+            margin-top: 0;
+        }
+        
+        .sidebar ul {
+            list-style-type: square;
+            padding-right: 20px;
+        }
+        
+        .sidebar a {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+        
+        .sidebar a:visited {
+            color: #551A8B;
+        }
+        
+        .footer {
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .guestbook-link {
+            background-color: #ffff99;
+            border: 2px solid #ff0000;
+            padding: 5px 10px;
+            display: inline-block;
+            margin: 10px;
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        
+        .webring {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #ffffcc;
+            border: 1px dashed #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            🌐 <a href="index.html">English</a> | <strong>עברית</strong>
+        </div>
+        
+        <div class="header">
+            <h1>ברוכים הבאים ליומן הרשת האישי שלי</h1>
+            <div class="subtitle">מחשבות, הרהורים והרפתקאות דיגיטליות</div>
+            <div class="subtitle">עודכן לאחרונה: <span id="lastUpdate"></span></div>
+        </div>
+        
+        <div class="nav">
+            <a href="index-he.html">עמוד הבית</a>
+            <a href="about-he.html">אודותיי</a>
+            <a href="links-he.html">קישורים מגניבים</a>
+            <a href="guestbook-he.html">ספר אורחים</a>
+            <a href="contact-he.html">צור קשר</a>
+        </div>
+        
+        <div class="post hebrew-post">
+            <div class="post-language">עברית 🇮🇱</div>
+            <div class="post-title">הפוסט הראשון שלי בעברית</div>
+            <div class="post-date">30 ביולי, 2025</div>
+            <div class="post-content">
+                <p>ברוכים הבאים לפינה הקטנה שלי ברשת! החלטתי סוף סוף להקים בלוג אישי כדי לחלוק את המחשבות והחוויות שלי. האתר הזה בנוי עם HTML ו-CSS פשוטים, בדיוק כמו בימים הטובים הישנים של האינטרנט.</p>
+                <p>אני מתכנן לכתוב על טכנולוגיה, ספרים שאני קורא, וכל מה שעובר לי בראש. תחזרו לבקר בקביעות לעדכונים, או תחתמו בספר האורחים שלי למטה!</p>
+                <p><b>קורא כרגע:</b> <i>הקתדרלה והבזאר</i> מאת אריק ס. ריימונד</p>
+            </div>
+        </div>
+        
+        <div class="post english-post">
+            <div class="post-language">English 🇺🇸</div>
+            <div class="post-title">My First Blog Post</div>
+            <div class="post-date">July 30, 2025</div>
+            <div class="post-content">
+                <p>Welcome to my corner of the World Wide Web! I've finally decided to start my own personal blog to share my thoughts and experiences. This site is built with simple HTML and CSS, just like the good old days of the internet.</p>
+                <p>I plan to write about technology, books I'm reading, and whatever else crosses my mind. Check back regularly for updates, or sign my guestbook below!</p>
+                <p><b>Currently reading:</b> <i>The Cathedral and the Bazaar</i> by Eric S. Raymond</p>
+            </div>
+        </div>
+        
+        <div class="post english-post">
+            <div class="post-language">English 🇺🇸</div>
+            <div class="post-title">Why I Love the Simple Web</div>
+            <div class="post-date">July 28, 2025</div>
+            <div class="post-content">
+                <p>There's something beautiful about the simplicity of early web design. No JavaScript frameworks, no complex build processes - just HTML, CSS, and pure content. Pages load instantly, work on any device, and will probably still work in 20 years.</p>
+                <p>Sometimes the old ways are the best ways. This blog is my tribute to that philosophy.</p>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3>אודות האתר הזה</h3>
+            <p>הבלוג הזה נכתב ידנית ב-HTML ו-CSS, מותאם ל-<b>Netscape Navigator 4.0+</b> ו-<b>Internet Explorer 5.0+</b>.</p>
+            
+            <h3>הסימניות שלי</h3>
+            <ul>
+                <li><a href="#">Slashdot</a> - חדשות לחנונים</li>
+                <li><a href="#">The Register</a> - נושך את היד שמאכילה את ה-IT</li>
+                <li><a href="#">Hacker News</a> - חדשות חברתיות</li>
+                <li><a href="#">AnandTech</a> - ביקורות חומרה</li>
+            </ul>
+            
+            <h3>אודות האתר</h3>
+            <p>האתר הוקם: יולי 2025</p>
+        </div>
+        
+        <div class="webring">
+            <p><b>טבעת בלוגים אישיים</b></p>
+            <a href="#">&lt;&lt; הקודם</a> | 
+            <a href="#">אקראי</a> | 
+            <a href="#">הבא &gt;&gt;</a>
+        </div>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="guestbook-he.html" class="guestbook-link">חתמו בספר האורחים שלי!</a>
+        </div>
+        
+        <div class="footer">
+            <p>האתר הזה נראה הכי טוב ברזולוציה של 800x600 או יותר</p>
+            <p>&copy; 2025 יומן הרשת האישי שלי. כל הזכויות שמורות.</p>
+            <p>
+                <img src="data:image/gif;base64,R0lGODlhFAAUAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAFAAUAAADXgi63P7wyklre2BwUFSz/dVFMCYgxFkxK4mQm1yZz4DcsEyh7hGwEsJPsBAAB8BwJhQAMjMyIUNZHQUFJJEAwCZt7AMFwRdLjAEBNEAaowA0MdAHFOg4TRQBKwYA1LEAACH5BAkKAAAALAAAAAAUABQAAANeCLrc/vDKSWuZbClLEHqQ4QkEqBqKBJGRWBIGqEkFbAQBFkIKRE6AFwCAAhSHRgAIwPdOQECAJ0NAHyFFAsRN5wAEAD4KHgADNFJEAOgJBPIGZONlHYUHgjAGHBBIRkOAACH5BAkKAAAALAAAAAAUABQAAANaCLrc/jDKSatFOOsNVBOqgdgFgRgAGCYBBJqNFpCSJyQ5pxMVFg6BtgAEcJfLBQDA7LjMfCcZvIAZGQADAkHQAAAVoGmQCNJnIMCAEQQAOw==" alt="נעשה עם פנקס רשימות" style="border: 1px solid #666;">
+                נעשה עם פנקס רשימות
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple JavaScript for last updated date
+        document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString('he-IL');
+    </script>
+</body>
+</html>
