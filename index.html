@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Web Log</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #333;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px double #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #0000EE;
+            font-size: 28px;
+            margin: 0;
+            text-decoration: underline;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .nav {
+            background-color: #ddd;
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #0000EE;
+            text-decoration: underline;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .nav a:visited {
+            color: #551A8B;
+        }
+        
+        .nav a:hover {
+            background-color: yellow;
+        }
+        
+        .post {
+            border: 1px solid #ccc;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fafafa;
+        }
+        
+        .post-title {
+            color: #0000EE;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+        
+        .post-date {
+            color: #666;
+            font-size: 12px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .post-content {
+            text-align: justify;
+        }
+        
+        .sidebar {
+            background-color: #e6e6e6;
+            border: 1px solid #999;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .sidebar h3 {
+            color: #0000EE;
+            font-size: 16px;
+            text-decoration: underline;
+            margin-top: 0;
+        }
+        
+        .sidebar ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        
+        .sidebar a {
+            color: #0000EE;
+            text-decoration: underline;
+        }
+        
+        .sidebar a:visited {
+            color: #551A8B;
+        }
+        
+        .footer {
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .guestbook-link {
+            background-color: #ffff99;
+            border: 2px solid #ff0000;
+            padding: 5px 10px;
+            display: inline-block;
+            margin: 10px;
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+        
+        .counter {
+            background-color: #000;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            padding: 5px;
+            display: inline-block;
+            border: 1px solid #666;
+        }
+        
+        .webring {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #ffffcc;
+            border: 1px dashed #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to My Personal Web Log</h1>
+            <div class="subtitle">Thoughts, musings, and digital adventures</div>
+            <div class="subtitle">Last updated: <span id="lastUpdate"></span></div>
+        </div>
+        
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#links">Cool Links</a>
+            <a href="#guestbook">Guestbook</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <div class="post">
+            <div class="post-title">My First Blog Post</div>
+            <div class="post-date">July 30, 2025</div>
+            <div class="post-content">
+                <p>Welcome to my corner of the World Wide Web! I've finally decided to start my own personal blog to share my thoughts and experiences. This site is built with simple HTML and CSS, just like the good old days of the internet.</p>
+                <p>I plan to write about technology, books I'm reading, and whatever else crosses my mind. Check back regularly for updates, or sign my guestbook below!</p>
+                <p><b>Currently reading:</b> <i>The Cathedral and the Bazaar</i> by Eric S. Raymond</p>
+            </div>
+        </div>
+        
+        <div class="post">
+            <div class="post-title">Why I Love the Simple Web</div>
+            <div class="post-date">July 28, 2025</div>
+            <div class="post-content">
+                <p>There's something beautiful about the simplicity of early web design. No JavaScript frameworks, no complex build processes - just HTML, CSS, and pure content. Pages load instantly, work on any device, and will probably still work in 20 years.</p>
+                <p>Sometimes the old ways are the best ways. This blog is my tribute to that philosophy.</p>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3>About This Site</h3>
+            <p>This blog is hand-coded in HTML and CSS, optimized for <b>Netscape Navigator 4.0+</b> and <b>Internet Explorer 5.0+</b>.</p>
+            
+            <h3>My Bookmarks</h3>
+            <ul>
+                <li><a href="#">Slashdot</a> - News for Nerds</li>
+                <li><a href="#">The Register</a> - Biting the hand that feeds IT</li>
+                <li><a href="#">Hacker News</a> - Social news</li>
+                <li><a href="#">AnandTech</a> - Hardware reviews</li>
+            </ul>
+            
+            <h3>Stats</h3>
+            <p>Page views: <span class="counter">001337</span></p>
+            <p>Site established: July 2025</p>
+        </div>
+        
+        <div class="webring">
+            <p><b>Personal Blog Web Ring</b></p>
+            <a href="#">&lt;&lt; Previous</a> | 
+            <a href="#">Random</a> | 
+            <a href="#">Next &gt;&gt;</a>
+        </div>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <a href="#guestbook" class="guestbook-link">SIGN MY GUESTBOOK!</a>
+        </div>
+        
+        <div class="footer">
+            <p>This site is best viewed in 800x600 resolution or higher</p>
+            <p>&copy; 2025 My Personal Web Log. All rights reserved.</p>
+            <p>
+                <img src="data:image/gif;base64,R0lGODlhFAAUAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAFAAUAAADXgi63P7wyklre2BwUFSz/dVFMCYgxFkxK4mQm1yZz4DcsEyh7hGwEsJPsBAAB8BwJhQAMjMyIUNZHQUFJJEAwCZt7AMFwRdLjAEBNEAaowA0MdAHFOg4TRQBKwYA1LEAACH5BAkKAAAALAAAAAAUABQAAANeCLrc/vDKSWuZbClLEHqQ4QkEqBqKBJGRWBIGqEkFbAQBFkIKRE6AFwCAAhSHRgAIwPdOQECAJ0NAHyFFAsRN5wAEAD4KHgADNFJEAOgJBPIGZONlHYUHgjAGHBBIRkOAACH5BAkKAAAALAAAAAAUABQAAANaCLrc/jDKSatFOOsNVBOqgdgFgRgAGCYBBJqNFpCSJyQ5pxMVFg6BtgAEcJfLBQDA7LjMfCcZvIAZGQADAkHQAAAVoGmQCNJnIMCAEQQAOw==" alt="Made with Notepad" style="border: 1px solid #666;">
+                Made with Notepad
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Simple JavaScript for last updated date
+        document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString();
+        
+        // Simple visitor counter animation
+        let counter = 1337;
+        setInterval(() => {
+            counter++;
+            document.querySelector('.counter').textContent = counter.toString().padStart(6, '0');
+        }, 30000); // Increment every 30 seconds
+    </script>
+</body>
+</html>
