@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook - My Personal Web Log</title>
+    <style>
+        body {
+            font-family: Times, "Times New Roman", serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #333;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px double #333;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #0000EE;
+            font-size: 28px;
+            margin: 0;
+            text-decoration: underline;
+        }
+        
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        .nav {
+            background-color: #ddd;
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .nav a {
+            color: #0000EE;
+            text-decoration: underline;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        
+        .nav a:visited {
+            color: #551A8B;
+        }
+        
+        .nav a:hover {
+            background-color: yellow;
+        }
+        
+        .nav .current {
+            background-color: #ffff99;
+            padding: 2px 5px;
+            border: 1px solid #333;
+        }
+        
+        .content {
+            margin: 20px 0;
+        }
+        
+        .guestbook-form {
+            background-color: #e6e6e6;
+            border: 2px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .form-group {
+            margin: 15px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 5px;
+            border: 2px inset #ddd;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+        }
+        
+        .form-group textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #ddd;
+            border: 2px outset #ddd;
+            padding: 8px 16px;
+            font-family: Times, "Times New Roman", serif;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #ccc;
+        }
+        
+        .submit-btn:active {
+            border: 2px inset #ddd;
+        }
+        
+        .guestbook-entry {
+            background-color: #ffffcc;
+            border: 1px solid #999;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .entry-header {
+            background-color: #cccccc;
+            margin: -15px -15px 10px -15px;
+            padding: 8px 15px;
+            border-bottom: 1px solid #999;
+            font-weight: bold;
+        }
+        
+        .entry-name {
+            color: #0000EE;
+            font-weight: bold;
+        }
+        
+        .entry-date {
+            color: #666;
+            font-size: 12px;
+            float: right;
+        }
+        
+        .entry-website {
+            font-size: 12px;
+            margin-top: 3px;
+        }
+        
+        .entry-message {
+            margin-top: 10px;
+            text-align: justify;
+        }
+        
+        .stats-box {
+            background-color: #f0f0f0;
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .warning-box {
+            background-color: #ffcccc;
+            border: 2px solid #ff0000;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 12px;
+        }
+        
+        .footer {
+            border-top: 2px solid #333;
+            padding-top: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .blink {
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Personal Web Log</h1>
+            <div class="subtitle">Guestbook - Sign Here!</div>
+        </div>
+        
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="links.html">Cool Links</a>
+            <span class="current">Guestbook</span>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="content">
+            <div class="stats-box">
+                📝 <b>Total Entries:</b> 42 &nbsp;&nbsp; 👥 <b>Visitors:</b> 1,337 &nbsp;&nbsp; 🌟 <b>Last Signed:</b> 2 hours ago
+            </div>
+            
+            <p>Welcome to my guestbook! This is where visitors like you can leave a message, share your thoughts, or just say hello. It's one of the oldest traditions of the personal web, and I'm keeping it alive!</p>
+            
+            <p><span class="blink">✨ <b>NEW!</b></span> Please sign my guestbook and let me know you were here!</p>
+            
+            <div class="warning-box">
+                <b>Rules:</b> Be respectful, no spam, no inappropriate content. Messages are moderated. HTML tags are not allowed for security reasons.
+            </div>
+            
+            <div class="guestbook-form">
+                <h3 style="margin-top: 0; color: #0000EE; text-decoration: underline;">📝 Sign My Guestbook</h3>
+                <form id="guestbookForm">
+                    <div class="form-group">
+                        <label for="name">Your Name: *</label>
+                        <input type="text" id="name" name="name" required maxlength="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email (optional, not displayed):</label>
+                        <input type="email" id="email" name="email" maxlength="100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Your Website/Homepage:</label>
+                        <input type="url" id="website" name="website" placeholder="https://yoursite.com" maxlength="200">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="location">Location (City, Country):</label>
+                        <input type="text" id="location" name="location" placeholder="New York, USA" maxlength="100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message: *</label>
+                        <textarea id="message" name="message" placeholder="Say hello, share your thoughts, or tell me about your website!" required maxlength="500"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Sign Guestbook!</button>
+                    <button type="reset" class="submit-btn">Clear Form</button>
+                </form>
+            </div>
+            
+            <h3 style="color: #0000EE; text-decoration: underline;">📖 Recent Entries</h3>
+            
+            <div class="guestbook-entry">
+                <div class="entry-header">
+                    <span class="entry-name">RetroWebFan92</span>
+                    <span class="entry-date">July 30, 2025 - 2:15 PM</span>
+                    <div class="entry-website">🌐 Website: <a href="#">http://retrocomputing.neocities.org</a> | 📍 Portland, OR</div>
+                </div>
+                <div class="entry-message">
+                    This site brings back so many memories of the early web! Love the authentic HTML and the attention to detail. Keep up the great work preserving the spirit of Web 1.0! 🎉
+                </div>
+            </div>
+            
+            <div class="guestbook-entry">
+                <div class="entry-header">
+                    <span class="entry-name">CodeWizard</span>
+                    <span class="entry-date">July 29, 2025 - 8:42 PM</span>
+                    <div class="entry-website">🌐 Website: <a href="#">https://handcodedhtml.com</a> | 📍 Berlin, Germany</div>
+                </div>
+                <div class="entry-message">
+                    Finally! A website that loads in under a second and doesn't require 50MB of JavaScript frameworks. This is how the web should be. Bookmarked! 👨‍💻
+                </div>
+            </div>
+            
+            <div class="guestbook-entry">
+                <div class="entry-header">
+                    <span class="entry-name">Sarah_1995</span>
+                    <span class="entry-date">July 28, 2025 - 11:30 AM</span>
+                    <div class="entry-website">📍 Toronto, Canada</div>
+                </div>
+                <div class="entry-message">
+                    Your blog post about the simple web really resonated with me. I'm inspired to create my own hand-coded site now. Thanks for keeping the old web alive! ✨
+                </div>
+            </div>
+            
+            <div class="guestbook-entry">
+                <div class="entry-header">
+                    <span class="entry-name">PixelMaster</span>
+                    <span class="entry-date">July 27, 2025 - 4:20 PM</span>
+                    <div class="entry-website">🌐 Website: <a href="#">http://pixelart.geocities.ws</a> | 📍 Tokyo, Japan</div>
+                </div>
+                <div class="entry-message">
+                    Excellent work on the retro design! The blinking guestbook button is a perfect touch. Would love to exchange links - I run a pixel art gallery site. 🎨
+                </div>
+            </div>
+            
+            <div class="guestbook-entry">
+                <div class="entry-header">
+                    <span class="entry-name">WebArchaeologist</span>
+                    <span class="entry-date">July 26, 2025 - 9:15 AM</span>
+                    <div class="entry-website">🌐 Website: <a href="#">https://oldweb.archive</a> | 📍 Austin, TX</div>
+                </div>
+                <div class="entry-message">
+                    This site is a beautiful homage to the early days of personal websites. I'm documenting sites like this for digital preservation - would you be interested in being featured in my web archive project?
+                </div>
+            </div>
+            
+            <div class="guestbook-entry">
+                <div class="entry-header">
+                    <span class="entry-name">NewbieCoder</span>
+                    <span class="entry-date">July 25, 2025 - 7:45 PM</span>
+                    <div class="entry-website">📍 Mumbai, India</div>
+                </div>
+                <div class="entry-message">
+                    Just starting to learn HTML and your source code is so clean and educational! Mind if I study it to learn proper web design? This is inspiring! 📚
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="#top">↑ Back to Top ↑</a> | 
+                <a href="index.html">← Return to Homepage</a>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 My Personal Web Log. All rights reserved.</p>
+            <p><i>Guestbook powered by authentic HTML forms and genuine human moderation!</i></p>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('guestbookForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for signing my guestbook! In a real deployment, this would be processed by a server script. Your message has been received! 📝');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
